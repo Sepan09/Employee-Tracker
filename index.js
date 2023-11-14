@@ -75,7 +75,7 @@ viewEmployees = () => {
 };
 
 viewRoles = () => {
-    db.query("SELECT role.id, role.title, role.department_id, role.salary FROM role", (err, data) => {
+    db.query("SELECT * FROM role", (err, data) => {
       console.table(data);
       mainMenu();
     });
